@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Arduino</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1 style="text-align:center";>Dados do Arduino</h1>
+    <body style="background-color: green;"></body>
+    <h2 style="text-align:left";>Valores lidos: {{mensagem}}</h2>
+
+    <!-- Adicione um elemento canvas para o gráfico -->
+    <canvas id="myChart"></canvas>
+
+    <!-- Seu código JavaScript para atualizar o gráfico -->
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var data = {
+            labels: [], // Etiquetas de tempo (vazio inicialmente)
+            datasets: [{
+                label:'Dados do Arduino',
+                data: [], // Valores do Arduino (vazio inicialmente)
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }]
+        };
+        var config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        var myChart = new Chart(ctx, config);
+
+        // Função para adicionar novos dados ao gráfico
+        function addData(chart, label, data) {
+            chart.data.labels.push(label);
+            chart.data.datasets[0].data.push(data);
+            chart.update();
+        }
+
+        // Código para receber dados do Arduino em tempo real e atualizar o gráfico
+        var socket = io.connect('http://' + document.domain + ':' + location.port + "/test");
+        socket.on('update_data', function(data) {
+            var label = new Date().toLocaleTimeString(); // Use o tempo como etiqueta
+            var value = data.value; // Substitua 'value' pelo nome do seu campo de dados
+            addData(myChart, label, mensagem);
+        });
+    </script>
+</body>
+</html>

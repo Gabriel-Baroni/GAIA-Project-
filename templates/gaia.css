@@ -1,0 +1,86 @@
+body{
+    font-family: sans-serif;
+    color: #526553;
+    background-color: #fffdd0
+}
+header {
+    text-align:center;
+    display: flex;
+    background-color: #435244;
+    color: #fffdd0;
+    padding: 1em;
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+a{
+    color: inherit;
+
+}
+.a{
+    width: 50%;
+    margin-top: 10%;
+}
+.b{
+    width: 50%;
+    background-color: #526553;
+    border-radius: 50%;
+}
+.ab{
+    display: flex;
+    width:100vw; 
+}
+
+.ab2{
+    display: flex;
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 110px; /* Define a distância a partir do topo da janela */
+    left: 50px;
+    width:50vw; 
+}
+.ab3{
+    display: flex;
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 101px; /* Define a distância a partir do topo da janela */
+    left: 600px;
+    width: 50vw; 
+}
+.ab4{
+    display: flex;
+    position: absolute; /* Define o posicionamento absoluto */
+    width: 50vw; 
+    top: 110px; /* Define a distância a partir do topo da janela */
+    left: 1150px;
+}
+.ab5{
+    display: flex;
+    position: absolute; /* Define o posicionamento absoluto */
+    width: 50vw; 
+    top: 250px; /* Define a distância a partir do topo da janela */
+    left: 1000px;
+}
+.a p, h2{
+    text-align: center ;
+    font-size: 1.5em;
+}
+UL {
+    display: flex;
+    list-style: none;
+}
+li{
+    
+}
+h1{
+    width: 80%;
+}
+
+table {
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 200px; /* Define a distância a partir do topo da janela */
+    left: 1000px; /* Define a distância a partir da esquerda da janela */
+}
+
+legenda{
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 150px; /* Define a distância a partir do topo da janela */
+    left: 1000px;
+}

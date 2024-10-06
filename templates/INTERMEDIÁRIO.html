@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Arduino</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="gaia.css">
+    </head>
+<body>
+    <header>
+        <h1 style="text-align:center";>Entrando no servidor</h1>
+        <ul>
+            <li> <a href="MENU GAIA.html"> Voltar ao Menu</a></li>
+        </ul>
+    </header>
+    <h2 style="text-align:left";>Entrar no servidor Gaia: <li> <a href="http://127.0.0.1:5000"> Informações da Gaia </a></li></h2>
+    <div class="ab6">
+        <div class="a">
+            <h2> ATENÇÃO!</h2>
+            <p>
+A ordem de exibição dos valores sera respectivamente: Luminosidade, Temperatura, Umidade do Ar e Umidade do solo.
+As infromações são obtidas por tempo real e para atualizar o gráfico é necessário atualizar a página. 
+            </p>    
+            <table border="1"> <!-- Atributo border define a espessura da borda da tabela -->
+                <tr> <!-- Define uma linha -->
+                    <th>Luminosidade</th> <!-- Define um cabeçalho de coluna -->
+                    <th>Temperatura</th>
+                    <th>Umidade do ar</th>
+                    <th>Umidade do Solo</th>
+                </tr>
+                <tr> <!-- Define outra linha -->
+                    <td>Máximo: 1024</td> <!-- Define uma célula de dados -->
+                    <td>Máximo:100°C</td>
+                    <td>Máximo: 100%</td>
+                    <td>Máximo: 1</td>
+                </tr>
+                <tr>
+                    <td>Mínimo: 0 </td>
+                    <td>Mínimo:0°C</td>
+                    <td>Mínimo: 0 </td>
+                    <td>Mínimo:1024</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<legenda>
+<p style="text-align:left"> Tabela com valores Mínimos e Máximos dos dados obtidos: </p>
+</legenda>
+    <div class="ab5">
+        <div class="a">
+            <p>
+                <img src="dados.png" style="width: 300px; display: block; margin: 0 auto;";>
+            </p> 
+        </div>
+    </div>
+
+</body>
+</html>
