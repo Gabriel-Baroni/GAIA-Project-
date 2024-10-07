@@ -87,13 +87,7 @@ if __name__ == '__main__':
 arduino = serial.Serial(port='COM4', baudrate= 9600,)
 
 print(nomeArquivo)
-##while True:
-   ## arquivo= open(nomeArquivo, "a+")
-   ##time.sleep(0.01)
-   ## readArduino()
-   ## index()
-   ## obter_dados()
-   ##  arquivo.close
+
     
 
 
