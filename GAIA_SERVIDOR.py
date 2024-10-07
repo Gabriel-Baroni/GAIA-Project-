@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
 arduino = serial.Serial(port='COM4', baudrate= 9600,)
 
-print(nomeArquivo)
+
 
     
 
